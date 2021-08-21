@@ -7,6 +7,7 @@ void main(List<String> arguments) {
   print((a + 15).power);
 
   print(a > b);
+  print(a < b);
 }
 
 class Hero {
@@ -38,6 +39,16 @@ class Hero {
   bool operator >(var other) {
     if (other is Hero) {
       if (power > other.power) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  bool operator <(var other) {
+    if (other is Hero) {
+      if (power < other.power) {
         return true;
       }
     }
